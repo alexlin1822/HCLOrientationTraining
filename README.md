@@ -1,9 +1,13 @@
 # HCL Orientation Training
 
 1-ExceptionAssignment
+
 2-BalanceException
+
 3-NameException
+
 4-StringAssignment
+
 
 # Maven
 
@@ -12,6 +16,9 @@ mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -Darchetyp
 # .gitignore
 
 /target/
+
 /.settings/
+
 /.classpath
+
 /.project
