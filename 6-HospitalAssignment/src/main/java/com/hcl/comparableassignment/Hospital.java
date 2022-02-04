@@ -24,7 +24,7 @@ public class Hospital {
 		for (Patient p : arrPatients) {
 			System.out.println(p.getID() + " " + p.getName() + " " + p.getAge());
 		}
-		
+
 		// Sort by Patient Name
 		Collections.sort(arrPatients, new PNameCompare());
 
@@ -33,7 +33,6 @@ public class Hospital {
 			System.out.println(p.getID() + " " + p.getName() + " " + p.getAge());
 		}
 
-		
 		// Sort by Patient Age
 		Collections.sort(arrPatients, new PAgeCompare());
 
@@ -42,9 +41,8 @@ public class Hospital {
 			System.out.println(p.getID() + " " + p.getName() + " " + p.getAge());
 		}
 
-		
 		// Doctor
-		
+
 		List<Doctor> arrDoctors = new ArrayList<Doctor>();
 		arrDoctors.add(new Doctor(1, "John", "Anesthesiology"));
 		arrDoctors.add(new Doctor(3, "James", "Medicine"));
@@ -65,7 +63,7 @@ public class Hospital {
 		for (Doctor p : arrDoctors) {
 			System.out.println(p.getID() + " " + p.getName() + " " + p.getSpecialty());
 		}
-		
+
 		// Sort by Doctor Name
 		Collections.sort(arrDoctors, new DNameCompare());
 
@@ -74,7 +72,6 @@ public class Hospital {
 			System.out.println(p.getID() + " " + p.getName() + " " + p.getSpecialty());
 		}
 
-		
 		// Sort by Doctor Specialty
 		Collections.sort(arrDoctors, new DSpecialtyCompare());
 
@@ -82,7 +79,6 @@ public class Hospital {
 		for (Doctor p : arrDoctors) {
 			System.out.println(p.getID() + " " + p.getName() + " " + p.getSpecialty());
 		}
-
 
 	}
 }
