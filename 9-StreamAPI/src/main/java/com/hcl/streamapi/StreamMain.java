@@ -10,11 +10,17 @@ public class StreamMain {
 		le = new ArrayList<Employee>();
 
 		System.out.println("----- Original Data ------");
-		InitData();
+		//list original Data
+		InitData(); 
+		
 		System.out.println("\nThe employee records whose salary >1000 $ ,Name Startes with B & D and age > 30 .");
 		System.out.println("\n--- Used StreamAPI filter:");
+		
+		//list data after using filter of Stream
 		useStreamAPI();
+		
 		System.out.println("\n--- Did not use StreamAPI filter:");
+		//list data after using filter of String functions
 		NoStreamAPI();
 	}
 
