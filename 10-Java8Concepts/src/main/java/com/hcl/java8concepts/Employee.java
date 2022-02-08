@@ -1,4 +1,4 @@
-package com.hcl.databaseexercise;
+package com.hcl.java8concepts;
 
 import java.util.*;
 
