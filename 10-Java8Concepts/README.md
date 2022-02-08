@@ -27,15 +27,22 @@
 9-StreamAPI  
    Programming with/ without Stream API  
   
-10-Java8Concepts  
+## 10-Java8Concepts  
    Java8 Concepts  
     
-# Maven
+## Description
+For the given below main concepts  
+    Lambda expressions,  
+    Method references,  
+    Functional interfaces,  
+    Stream API,Parallel Stream,  
+    Default methods,  
+    Static methods in interface,  
+    Optional class,  
+    Collectors class,  
+    ForEach() method,  
+    Predicate  
+    BiFunction examples  
+  
+you have to go through(self-study)  of all the concepts also to implement at least 1 program for each concept.  
 
-mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4
-
-# .gitignore
-/target/  
-/.settings/  
-/.classpath  
-/.project  
