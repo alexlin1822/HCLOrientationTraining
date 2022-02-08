@@ -21,6 +21,9 @@
 7-ListAssignment
     ArrayList,Set,Map exercise
 
+8-DatabaseExercise
+    JDBC exercise
+
 # Maven
 
 mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4
