@@ -8,7 +8,15 @@ public class Employee {
 	private Date gDOB;
 	private double gSalary;
 
+	public Employee() {
+	}
+
 	public Employee(int employeeid, String employeeName, Date dob, double salary, int age) {
+		SetData(employeeid, employeeName, dob, salary, age);
+	}
+
+	// Store employee data
+	public void SetData(int employeeid, String employeeName, Date dob, double salary, int age) {
 		gEmployeeid = employeeid;
 		gEmployeeName = employeeName;
 		gDOB = dob;
@@ -16,6 +24,7 @@ public class Employee {
 		gAge = age;
 	}
 
+	// Get data functions
 	public int getEmpID() {
 		return gEmployeeid;
 	}
@@ -40,4 +49,24 @@ public class Employee {
 		return getEmpID() + " " + getEmpName() + " " + getDOB() + " " + getAge() + " " + getSalary();
 	}
 
+	// Set data functions
+	public void setEmpID(int employeeid) {
+		gEmployeeid = employeeid;
+	}
+
+	public void setEmpName(String employeeName) {
+		gEmployeeName = employeeName;
+	}
+
+	public void setDOB(Date dob) {
+		gDOB = dob;
+	}
+
+	public void setSalary(double salary) {
+		gSalary = salary;
+	}
+
+	public void setAge(int age) {
+		gAge = age;
+	}
 }
