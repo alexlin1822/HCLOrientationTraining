@@ -29,6 +29,9 @@
   
 10-Java8Concepts  
    Java8 Concepts  
+
+11-HibernateExercise  
+  Database exercise with Hibernate   
     
 # Maven
 
