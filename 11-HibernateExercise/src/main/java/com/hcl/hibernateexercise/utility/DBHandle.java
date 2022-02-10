@@ -7,7 +7,7 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 
 public class DBHandle {
-	//Insert record
+	// Insert record
 	public void insertEntity(String sFirstName, String sLastName, String sEmail) {
 		EntityManager entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
 		EntityTransaction entityTransaction = entityManager.getTransaction();
@@ -18,43 +18,39 @@ public class DBHandle {
 		entityManager.close();
 	}
 
-	//Select record
+	// Select record
 	public void SelectEntity(String sID) {
-		String sSQL="";
+		String sSQL = "";
 
 		EntityManager entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
 		entityManager.getTransaction().begin();
 
-		
-		
 		if (sID.equals("")) {
-			sSQL="FROM Student";
-		}else {
-			sSQL="FROM Student WHERE id="+sID;
+			sSQL = "FROM Student";
+		} else {
+			sSQL = "FROM Student WHERE id=" + sID;
 		}
-		
-		Query students = entityManager.createQuery(sSQL);
-		
 
-		//Student student = entityManager.find(Student.class, iID);
-		
-		List<Student> result=students.getResultList();
-		
+		Query students = entityManager.createQuery(sSQL);
+
+		List<Student> result = students.getResultList();
+
 		System.out.println("------------------- Student Information -------------------");
 		System.out.println("ID   First Name     Last Name		Email");
-		
+
 		for (Student student : result) {
-			System.out.println(student.getId() + "	" + student.getFirstName() + "		" + student.getLastName() + "	" + student.getEmail());
+			System.out.println(student.getId() + "	" + student.getFirstName() + "		" + student.getLastName()
+					+ "	" + student.getEmail());
 		}
-		
+
 		System.out.println("----------------------- End -----------------------");
 		System.out.println();
 
 		entityManager.getTransaction().commit();
 		entityManager.close();
 	}
-		
-	//Update record
+
+	// Update record
 	public void updateEntity(int iID, String sF, String sL, String sE) {
 		EntityManager entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
 		entityManager.getTransaction().begin();
@@ -69,7 +65,7 @@ public class DBHandle {
 		entityManager.close();
 	}
 
-	//Remove record
+	// Remove record
 	public void removeEntity(int iID) {
 		EntityManager entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
 		entityManager.getTransaction().begin();
