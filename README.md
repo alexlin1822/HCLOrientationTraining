@@ -33,6 +33,9 @@
 11-HibernateExercise  
   Database exercise with Hibernate   
     
+12-JSPWebProject  
+  login and registration application  
+
 # Maven
 
 mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4
