@@ -14,10 +14,4 @@ Important fields of this application:
 Module 1) User will register with the details.  
   
 Module2) with the same database table user will get verified through login.  
-  
-  
-# .gitignore
-/target/  
-/.settings/  
-/.classpath  
-/.project  
+
