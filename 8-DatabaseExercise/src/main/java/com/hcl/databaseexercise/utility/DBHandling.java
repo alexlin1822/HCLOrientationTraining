@@ -78,7 +78,7 @@ public class DBHandling {
 		try (Connection con = DriverManager.getConnection(url, user, password);
 				PreparedStatement preparedStatement = con.prepareStatement(DELETE_SQL + sCondition)) {
 			preparedStatement.executeUpdate();
-			
+
 			logger.info("-- Record deleted! --");
 			System.out.println("-- Record deleted! --");
 		} catch (SQLException e) {

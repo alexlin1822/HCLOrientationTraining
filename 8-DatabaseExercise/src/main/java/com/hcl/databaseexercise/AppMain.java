@@ -2,7 +2,8 @@ package com.hcl.databaseexercise;
 
 import java.sql.Date;
 import java.util.Scanner;
-import org.apache.logging.log4j.*;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import com.hcl.databaseexercise.utility.DBHandling;
 import com.hcl.databaseexercise.utility.Employee;
@@ -15,6 +16,7 @@ public class AppMain {
 
 	public static void main(String[] args) {
 		// Connect database
+
 		logger.debug("Connecting database and table...");
 
 		// Create table and initial sample data
@@ -26,7 +28,7 @@ public class AppMain {
 
 		boolean isRunning = true;
 
-		logger.info("Menu showing");
+		logger.trace("Menu showing");
 
 		while (isRunning) {
 			logger.info("waiting to user enter...");
