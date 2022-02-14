@@ -3,7 +3,7 @@
 ## 12-JSPWebProject  
   login and registration application  
 
-# Description
+## Description
 
 Create a sample login and registration application using MySQL database
 Project Objective:  
