@@ -27,7 +27,7 @@ public class Login extends HttpServlet {
 				// redirects to successful.jsp when user name and password are correct.
 				resp.sendRedirect("successful.jsp");
 			} else {
-				resp.sendRedirect("index.jsp");
+				resp.sendRedirect("failure.jsp");
 			}
 		} catch (ClassNotFoundException e) {
 			System.out.print(e);
