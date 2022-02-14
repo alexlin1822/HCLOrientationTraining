@@ -9,6 +9,6 @@
 <body>
 	<div align="center">
 		<h2 style="color: blue">Login Successful!</h2>
-	</div>>
+	</div>
 </body>
 </html>

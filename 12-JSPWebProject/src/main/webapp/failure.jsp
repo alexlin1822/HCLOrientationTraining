@@ -8,6 +8,6 @@
 </head>
 <body>
 <h1>Invalid user name or password</h1>
-<%@ include file="index.jsp" %>>	
+<%@ include file="index.jsp" %>	
 </body>
 </html>
