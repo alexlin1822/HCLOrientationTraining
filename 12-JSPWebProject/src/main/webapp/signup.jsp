@@ -31,6 +31,7 @@ h2 {
 			<div class="divform">
 				Password:&nbsp;&nbsp;&nbsp; <input type="password" name="password">
 			</div>
+			<br>
 			<div class="divform">
 				Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"
 					name="email">

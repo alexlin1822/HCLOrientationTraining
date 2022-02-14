@@ -19,7 +19,7 @@ public class DBHandling {
 		Class.forName("com.mysql.jdbc.Driver");
 
 		try (Connection connection = DriverManager
-				.getConnection("jdbc:mysql://localhost:3306/mysql_database?useSSL=false", "root", "root");
+				.getConnection("jdbc:mysql://localhost:3306/LoginDB?useSSL=false", "root", "");
 				PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL)) {
 			preparedStatement.setString(1, sUser);
 			preparedStatement.setString(2, sPw);
@@ -33,6 +33,7 @@ public class DBHandling {
 		return result;
 	}
 
+	
 	public static int checkUser(String sUser, String sPw) throws ClassNotFoundException {
 		String QUERY_USERS_SQL = "SELECT id FROM LOGINTB WHERE username=? and password=?";
 
@@ -41,7 +42,7 @@ public class DBHandling {
 		Class.forName("com.mysql.jdbc.Driver");
 
 		try (Connection connection = DriverManager
-				.getConnection("jdbc:mysql://localhost:3306/mysql_database?useSSL=false", "root", "root");
+				.getConnection("jdbc:mysql://localhost:3306/LoginDB?useSSL=false", "root", "");
 				PreparedStatement preparedStatement = connection.prepareStatement(QUERY_USERS_SQL)) {
 
 			preparedStatement.setString(1, sUser);
