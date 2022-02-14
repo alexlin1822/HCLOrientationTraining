@@ -5,12 +5,20 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.*;
 
-import com.mysql.cj.Query;
-
+/**
+ * @author Alex
+ *
+ */
 public class DBHandling {
 
+	/**
+	 * @param sUser
+	 * @param sPw
+	 * @param sEmail
+	 * @return
+	 * @throws ClassNotFoundException
+	 */
 	public static int signupUser(String sUser, String sPw, String sEmail) throws ClassNotFoundException {
 		String INSERT_USERS_SQL = "INSERT INTO LoginTB (username, password, email) VALUES (?,?,?);";
 
@@ -18,13 +26,12 @@ public class DBHandling {
 
 		Class.forName("com.mysql.jdbc.Driver");
 
-		try (Connection connection = DriverManager
-				.getConnection("jdbc:mysql://localhost:3306/LoginDB?useSSL=false", "root", "");
-				PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL)) {
+		try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/LoginDB?useSSL=false",
+				"root", ""); PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL)) {
 			preparedStatement.setString(1, sUser);
 			preparedStatement.setString(2, sPw);
 			preparedStatement.setString(3, sEmail);
-			//System.out.println(preparedStatement);
+			// System.out.println(preparedStatement);
 			result = preparedStatement.executeUpdate();
 
 		} catch (SQLException e) {
@@ -33,7 +40,12 @@ public class DBHandling {
 		return result;
 	}
 
-	
+	/**
+	 * @param sUser
+	 * @param sPw
+	 * @return
+	 * @throws ClassNotFoundException
+	 */
 	public static int checkUser(String sUser, String sPw) throws ClassNotFoundException {
 		String QUERY_USERS_SQL = "SELECT id FROM LOGINTB WHERE username=? and password=?";
 
@@ -41,9 +53,8 @@ public class DBHandling {
 
 		Class.forName("com.mysql.jdbc.Driver");
 
-		try (Connection connection = DriverManager
-				.getConnection("jdbc:mysql://localhost:3306/LoginDB?useSSL=false", "root", "");
-				PreparedStatement preparedStatement = connection.prepareStatement(QUERY_USERS_SQL)) {
+		try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/LoginDB?useSSL=false",
+				"root", ""); PreparedStatement preparedStatement = connection.prepareStatement(QUERY_USERS_SQL)) {
 
 			preparedStatement.setString(1, sUser);
 			preparedStatement.setString(2, sPw);
