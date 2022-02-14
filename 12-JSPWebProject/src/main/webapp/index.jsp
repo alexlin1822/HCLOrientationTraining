@@ -4,7 +4,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Alex App Sign Up</title>
+<title>Alex App Login</title>
+
 <style>
 body {
 	background-color: powderblue;
@@ -23,7 +24,7 @@ h2 {
 <body>
 	<div class="divform">
 		<h2>Login</h2>
-		<form action="<%=request.getContextPath()%>/signup" method="post">
+		<form action="<%=request.getContextPath()%>/login" method="post">
 			<div class="divform">
 				UserName:&nbsp; <input type="text" name="username">
 			</div>
@@ -31,15 +32,16 @@ h2 {
 			<div class="divform">
 				Password:&nbsp;&nbsp;&nbsp; <input type="password" name="password">
 			</div>
-			<div class="divform">
-				Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"
-					name="email">
-			</div>
 			<br>
 			<div>
-				<input type="submit" value="signup">
+				<input type="submit" value="Login">
 			</div>
 		</form>
+	</div>
+	<br>
+	<br>
+	<div class="divform">
+		<a href="signup.jsp">Sign up</a>
 	</div>
 </body>
 </html>

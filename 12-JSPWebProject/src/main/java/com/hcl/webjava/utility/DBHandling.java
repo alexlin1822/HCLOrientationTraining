@@ -11,7 +11,7 @@ import com.mysql.cj.Query;
 
 public class DBHandling {
 
-	public int signupUser(String sUser, String sPw, String sEmail) throws ClassNotFoundException {
+	public static int signupUser(String sUser, String sPw, String sEmail) throws ClassNotFoundException {
 		String INSERT_USERS_SQL = "INSERT INTO LoginTB (username, password, email) VALUES (?,?,?);";
 
 		int result = 0;
@@ -33,7 +33,7 @@ public class DBHandling {
 		return result;
 	}
 
-	public int checkUser(String sUser, String sPw) throws ClassNotFoundException {
+	public static int checkUser(String sUser, String sPw) throws ClassNotFoundException {
 		String QUERY_USERS_SQL = "SELECT id FROM LOGINTB WHERE username=? and password=?";
 
 		int id = 0;
