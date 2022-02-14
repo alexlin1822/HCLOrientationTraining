@@ -5,12 +5,43 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Alex App Login</title>
+
+<style>
+body {
+	background-color: powderblue;
+}
+
+h2 {
+	color: blue;
+}
+
+.divform {
+	width: 100%;
+	text-align: center
+}
+</style>
 </head>
 <body>
-	<form action="index.jsp" method="post">
-		UserName:<input type="text" name="username"><br>
-		Password:<input type="password" name="password"><br> <input
-			type="submit" value="login">
-	</form>
+	<div class="divform">
+		<h2>Login</h2>
+		<form action="<%=request.getContextPath()%>/login" method="post">
+			<div class="divform">
+				UserName:&nbsp; <input type="text" name="username">
+			</div>
+			<br>
+			<div class="divform">
+				Password:&nbsp;&nbsp;&nbsp; <input type="password" name="password">
+			</div>
+			<br>
+			<div>
+				<input type="submit" value="login">
+			</div>
+		</form>
+	</div>
+	<br>
+	<br>
+	<div class="divform">
+		<a href="signup.jsp">Sign up</a>
+	</div>
 </body>
 </html>

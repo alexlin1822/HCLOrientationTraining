@@ -5,13 +5,41 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Alex App Sign Up</title>
+<style>
+body {
+	background-color: powderblue;
+}
+
+h2 {
+	color: blue;
+}
+
+.divform {
+	width: 100%;
+	text-align: center
+}
+</style>
 </head>
 <body>
-	<form action="process.jsp" method="post">
-		UserName:<input type="text" name="username"><br>
-		Password:<input type="password" name="password"><br> 
-		Email:<input type="text" name="email"><br>
-		<input type="submit" value="signup">
-	</form>
+	<div class="divform">
+		<h2>Login</h2>
+		<form action="<%=request.getContextPath()%>/signup" method="post">
+			<div class="divform">
+				UserName:&nbsp; <input type="text" name="username">
+			</div>
+			<br>
+			<div class="divform">
+				Password:&nbsp;&nbsp;&nbsp; <input type="password" name="password">
+			</div>
+			<div class="divform">
+				Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"
+					name="email">
+			</div>
+			<br>
+			<div>
+				<input type="submit" value="signup">
+			</div>
+		</form>
+	</div>
 </body>
 </html>

@@ -45,3 +45,9 @@ after implementation of these menus driven program, you can further improve the 
   
 Use maven project, proper java coding convention ,exception handling wherever you feel you can use Java 8 also.  
   
+### Log4j and Junit  
+  
+1.Implement the Log4j features use the the FIleAppender ,Pattern Layout create a log file and capture all the suitable required information in the log file  
+  
+2.For the Different CRUD methods ,you have to write separate JUNIT test cases for all the methods implemented in the JDBC ,use the related assertions conditions for this.  
+  

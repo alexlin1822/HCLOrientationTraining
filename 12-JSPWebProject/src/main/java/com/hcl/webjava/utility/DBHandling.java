@@ -1,4 +1,4 @@
-package com.hcl.webjava;
+package com.hcl.webjava.utility;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,7 +9,7 @@ import java.util.*;
 
 import com.mysql.cj.Query;
 
-public class DBHandle {
+public class DBHandling {
 
 	public int signupUser(String sUser, String sPw, String sEmail) throws ClassNotFoundException {
 		String INSERT_USERS_SQL = "INSERT INTO LoginTB (username, password, email) VALUES (?,?,?);";
@@ -20,14 +20,11 @@ public class DBHandle {
 
 		try (Connection connection = DriverManager
 				.getConnection("jdbc:mysql://localhost:3306/mysql_database?useSSL=false", "root", "root");
-
 				PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL)) {
 			preparedStatement.setString(1, sUser);
 			preparedStatement.setString(2, sPw);
 			preparedStatement.setString(3, sEmail);
-
-			System.out.println(preparedStatement);
-			// Step 3: Execute the query or update query
+			//System.out.println(preparedStatement);
 			result = preparedStatement.executeUpdate();
 
 		} catch (SQLException e) {
@@ -45,13 +42,12 @@ public class DBHandle {
 
 		try (Connection connection = DriverManager
 				.getConnection("jdbc:mysql://localhost:3306/mysql_database?useSSL=false", "root", "root");
-
 				PreparedStatement preparedStatement = connection.prepareStatement(QUERY_USERS_SQL)) {
+
 			preparedStatement.setString(1, sUser);
 			preparedStatement.setString(2, sPw);
 
 			System.out.println(preparedStatement);
-			// Step 3: Execute the query or update query
 			ResultSet rs = preparedStatement.executeQuery();
 
 			while (rs.next()) {
